@@ -1,0 +1,1 @@
+web: java -Ddw.server.connector.port=9090 -cp build/install/lib/*;. com.asits.website.dw.app.WebsiteApplication server server.yml

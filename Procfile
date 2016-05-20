@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -Ddw.server.connector.port=$PORT -cp build/install/lib/*:. com.asits.website.dw.app.WebsiteApplication server server.yml

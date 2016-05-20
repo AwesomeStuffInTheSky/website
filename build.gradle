@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'wrapper'
+apply plugin: 'eclipse'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+mainClassName = "com.asits.website.dw.app.WebsiteApplication"
+wrapper.gradleVersion = '2.13'
+
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+	compile group: 'io.dropwizard',	name: 'dropwizard-core',	version: '0.9.1'
+	compile group: 'io.dropwizard',	name: 'dropwizard-assets',	version: '0.9.1'
+	
+	compile group: 'javax',			name: 'javaee-api', 		version: '7.0'
+}
+
+
+task stage (
+	//dependsOn: [ 'clean', 'installDist' ]
+	dependsOn: [ 'installDist' ]
+)
+
+
+installDist {
+	destinationDir = file( 'build/install/' ) 
+}
+
