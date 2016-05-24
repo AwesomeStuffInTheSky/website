@@ -8,6 +8,7 @@ public final class WebsiteApplicationTest {
 
 
 	@Test
+	public void uselessTest() {
 
 	}
 
