@@ -1,0 +1,202 @@
+@keyframes cloud-movement-small {
+    from {
+        left: 110%;
+    }
+    to {
+        left: -480px;
+    }
+}
+
+@keyframes cloud-movement-large {
+    from {
+        left: 110%;
+    }
+    to {
+        left: -900px;
+    }
+}
+
+@media( min-width: 1920px ) {
+    @keyframes cloud-movement-small {
+        from {
+            left: 110%;
+        }
+        to {
+            left: -900px;
+        }
+    }
+    @keyframes cloud-movement-large {
+        from {
+            left: 110%;
+        }
+        to {
+            left: -1600px;
+        }
+    }
+}
+
+body, body input {
+    font-family: Montserrat;
+    letter-spacing: -1px;
+}
+
+.page1 {
+    /*background-color: #0022ff;*/
+    background-color: #337ab7;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.page2 {
+    background-color: #efefef;
+    color: #444;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+
+    position: fixed;
+    width: 100%;
+    top: 100%;
+
+    box-shadow: inset 0px 5px 12px rgba( 0, 0, 0, 0.7 );
+}
+
+.cloud {
+    position: fixed;
+    left: 110%;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.awesome-cloud {
+    animation-name: cloud-movement-large;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.stuff-cloud {
+    animation-name: cloud-movement-small;
+    animation-duration: 11s;
+    animation-delay: 1.5s;
+}
+
+.in-the-cloud {
+    animation-name: cloud-movement-small;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.sky-cloud {
+    animation-name: cloud-movement-large;
+    animation-duration: 13s;
+    animation-delay: 4.5s;
+}
+
+.clouds-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.login-bar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    /*background-color: rgba( 160, 160, 80, 0.7 );*/
+    background-color: rgba( 60, 60, 60, 0.7 );
+
+    z-index: 1;
+}
+
+.vertical-align {
+    position: relative;
+    top: 13px;
+}
+
+p {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 42.5px;
+    font-weight: 700;
+
+    margin: 0px;
+    padding-top: 50px;
+
+    color: #444;
+}
+
+h3 {
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}   
+
+h4 {
+    color: #a0a0a0;
+    font-size: 12px;
+}
+
+.copyright {
+    color: #a0a0a0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@keyframes spin-180deg {
+    0% {
+        transform: rotate( 0deg );
+    }
+    100% {
+        transform: rotate( 180deg );
+    }
+}
+
+@keyframes spin-0deg {
+    0% {
+        transform: rotate( 180deg );
+    }
+    100% {
+        transform: rotate( 0deg );
+    }
+}
+
+.footer-arrow-up {
+    position: fixed;
+
+    font-size: 48px;
+    color: #1c1c1c;
+
+    left: calc( 50% - 24px );
+    top: calc( 100% - 50px );
+    cursor: hand;
+
+    display: inline-block;
+}
+
+.rotate-180deg {
+    animation-name: spin-180deg;
+    animation-duration: 0.8s;
+    transform: rotate( 180deg );
+}
+
+.rotate-0deg {
+    animation-name: spin-0deg;
+    animation-duration: 0.8s;
+    transform: rotate( 0deg );
+}
